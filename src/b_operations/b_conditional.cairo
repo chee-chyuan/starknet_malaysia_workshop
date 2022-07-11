@@ -14,15 +14,15 @@ func fix_this{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
     tempvar temp 
     if input == 0:
         temp = 1
-        ### for this exercise, lets assume that tempvar xx = 5 is necessary
-        ### in our normal programming world, the code absolutely work, but why does it not?
+        ### for this exercise, lets assume that tempvar xx = 5 is absolutely necessary and must not be removed
+        ### in our normal programming world, the code absolutely works, but why does it not?
         tempvar xx = 5
     else:
         temp = input
 
         ### what can we do over here to fix the problem?
 
-        # adding a random ap instruction so that the 'steps matches in each branch
+        # adding a random ap instruction so that the 'steps' matches in each branch
         tempvar yy = 1
     end
 
