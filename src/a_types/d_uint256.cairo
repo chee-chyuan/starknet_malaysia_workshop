@@ -11,6 +11,7 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 
 
 # our uint256 import
+### the imports are incomplete. Add in imports that we need to make our test pass
 from starkware.cairo.common.uint256 import Uint256, uint256_add, uint256_le
 
 # perform addition
