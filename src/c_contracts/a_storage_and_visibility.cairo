@@ -39,6 +39,7 @@ end
 func set_simple_storage{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
     val:felt
 ):
+    ### Logic here
     simple_storage.write(val)
     return ()
 end

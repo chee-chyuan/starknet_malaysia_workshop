@@ -38,5 +38,15 @@ end
 
 @view
 func test_set_and_get{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}():
+    tempvar contract_address
+    %{ 
+        ids.contract_address = context.contract_address 
+    %}
+
+    IContract.set_simple_storage(contract_address=contract_address, val=5)
+
+    let (res) = IContract.get_simple_storage(contract_address=contract_address)
+    assert res = 5
+
     return ()
 end
