@@ -27,7 +27,7 @@ func get_factorial_of_7{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashB
 
     let nums_len = 7
 
-    ### implement the factorial function herer
+    ### implement the factorial function here
     let (res) = factorial(nums_len=nums_len, nums=nums)
 
     return (res=res)
