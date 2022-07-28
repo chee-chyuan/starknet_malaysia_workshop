@@ -28,7 +28,6 @@ func get_factorial_of_7{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashB
     let nums_len = 7
 
     ### implement the factorial function here
-    let (res) = factorial(nums_len=nums_len, nums=nums)
 
     return (res=res)
 end
@@ -39,16 +38,5 @@ func factorial{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
 
     ### logic of the factorial function
 
-    if nums_len == 0:
-        return (res=0)
-    end
-
-    if nums_len == 1:
-        return (res=nums[0])
-    end
-
-    let (temp) = factorial(nums_len=nums_len-1, nums=&nums[1])
-
-    let res = temp * nums[0]
-    return (res=res)
+  
 end
