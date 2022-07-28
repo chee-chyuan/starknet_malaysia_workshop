@@ -46,7 +46,6 @@ func set_simple_storage{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBu
 end
 
 ### you will need something here to help us
-from starkware.cairo.common.math import assert_not_equal
 
 @external
 func set_simple_storage_error{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
