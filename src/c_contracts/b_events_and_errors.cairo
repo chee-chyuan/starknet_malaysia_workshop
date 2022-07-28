@@ -17,11 +17,6 @@ end
 
 ### Declare event here
 ### declare an event called 'set' that emits the value of the stored item
-@event
-func set(
-    val : felt
-):
-end
 
 @constructor
 func constructor{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
@@ -46,7 +41,6 @@ func set_simple_storage{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: HashBu
     simple_storage.write(val)
 
     ### add event here to output the val
-    set.emit(val=val)
 
     return ()
 end
@@ -60,9 +54,6 @@ func set_simple_storage_error{syscall_ptr:felt*, range_check_ptr, pedersen_ptr: 
 ):
     ### for some reason, we want our input value to NOT be 100
     ### output an error message 'Input Val cannot be 100' when the user inputs a value that is 100
-    with_attr error_message("Input Val cannot be 100"):
-        assert_not_equal(val, 100)
-    end
 
     simple_storage.write(val)
 

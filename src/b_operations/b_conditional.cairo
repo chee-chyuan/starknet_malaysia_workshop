@@ -21,9 +21,6 @@ func fix_this{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}(
         temp = input
 
         ### what can we do over here to fix the problem?
-
-        # adding a random ap instruction so that the 'steps' matches in each branch
-        tempvar yy = 1
     end
 
 

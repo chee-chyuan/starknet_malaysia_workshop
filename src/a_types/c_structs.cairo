@@ -32,7 +32,6 @@ func my_first_struct{syscall_ptr: felt* , range_check_ptr, pedersen_ptr: HashBui
 ) -> (res: MyFirstStruct):
 
     ### declare your struct so that it contains the information passed in from the params
-    let my_first_struct = MyFirstStruct(name=name, age=age, items_len=items_len, items=items)
 
     return (res=my_first_struct)
 end
@@ -46,10 +45,11 @@ func read_struct{syscall_ptr: felt* , range_check_ptr, pedersen_ptr: HashBuiltin
     let (my_struct) = my_first_struct(name=1, age=1, items_len = 2, items=arr)
 
     ### uncomment and modify assert statments here
+    ### check that each property of my_struct is correct 
+    ### eg
     assert my_struct.name = 1
-    assert my_struct.age = 1
-    assert my_struct.items_len = 2
-    assert my_struct.items[1] = 3
+    
+    ### complete the rest
 
     return ()
 
