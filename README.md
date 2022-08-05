@@ -3,6 +3,8 @@
 ## Prerequisite
 [Protostar](https://docs.swmansion.com/protostar/docs/tutorials/installation)
 
+Due to git not allowing me to commit an empty folder, after commiting, do create an empty folder by the name of `lib`
+
 ## Introduction
 This workshop is design to be a hands on workshop where you will complete the logic to clear a test
 
